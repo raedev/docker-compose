@@ -1,0 +1,11 @@
+version: '3'
+services:
+    jenkins:
+        hostname: jenkins
+        container_name: jenkins
+        image: jenkins
+        restart: always
+        ports:
+            - "8080:8080"
+        volumes:
+            - /var/lib/jenkins/:/var/jenkins_home/
